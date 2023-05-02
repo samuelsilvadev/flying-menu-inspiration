@@ -31,12 +31,8 @@ ul {
   list-style: none;
 }
 
-li {
+[data-jumpy-animation] {
   color: var(--white);
-}
-
-a {
-  color: inherit;
   text-decoration: none;
   font-size: 72px;
   font-weight: bold;
@@ -44,41 +40,29 @@ a {
   outline: none;
   border-bottom: 1px solid transparent;
   overflow: hidden;
-}
-
-a:where(:hover, :focus) {
-  color: var(--amber);
-  border-bottom-color: var(--amber);
-}
-
-a:where(:hover, :focus) :where(span, [data-jumpy-animation-hidden-text] span) {
-  animation: jumpy 1s forwards;
-  animation-delay: calc(0.1s * var(--delay));
-}
-
-[data-jumpy-animation] {
   position: relative;
 }
 
-[data-jumpy-animation-hidden-text] {
+:where([data-jumpy-animation], [data-jumpy-animation-wrapper]) > span {
+  transform: translateY(0);
+  transition: transform 1s, color 200ms;
+  transition-delay: calc(0.1s * var(--delay));
+}
+
+[data-jumpy-animation]:where(:hover, :focus) {
+  color: var(--color);
+  border-bottom-color: currentColor;
+}
+
+[data-jumpy-animation]:where(:hover, :focus)
+  :is(span, [data-jumpy-animation-wrapper] span) {
+  transform: translateY(-100%);
+}
+
+[data-jumpy-animation-wrapper] {
   position: absolute;
   top: 0;
   left: 0;
   transform: translateY(100%);
-}
-
-[data-jumpy-animation-hidden-text] span {
-  transform: translateY(0);
-  color: var(--rose);
-  display: inline-block;
-}
-
-@keyframes jumpy {
-  0% {
-    transform: translateY(0);
-  }
-  50%,
-  100% {
-    transform: translateY(-100%);
-  }
+  display: inline-flex;
 }

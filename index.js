@@ -6,7 +6,7 @@ for (const element of elementsToAnimate) {
   const updatedElementContext = chunks
     .map((chunk, index) => `<span style="--delay: ${index}">${chunk}</span>`)
     .join("");
-  const hiddenText = `<div data-jumpy-animation-hidden-text>${updatedElementContext}</div>`;
+  const hiddenText = `<div data-jumpy-animation-wrapper>${updatedElementContext}</div>`;
 
   element.innerHTML = `${updatedElementContext}${hiddenText}`;
 }
