@@ -5,7 +5,7 @@ This project was inspired on a linkedin post from [SuryaKant Borad](https://www.
 ## Preview
 
 <video controls="true" allowfullscreen="true" poster="./screenshots/screenshot.png">
-    <source src="./screenshots/preview.mov" type="video/mov">
+    <source src="./screenshots/preview.mov" type="video/mp4">
 </video>
 
 ## Run Locally
