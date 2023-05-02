@@ -4,9 +4,8 @@ This project was inspired on a linkedin post from [SuryaKant Borad](https://www.
 
 ## Preview
 
-<video controls="true" allowfullscreen="true" poster="./screenshots/screenshot.png">
-    <source src="./screenshots/preview.mp4" type="video/mp4">
-</video>
+https://user-images.githubusercontent.com/13966565/235767865-5916af51-1fcb-4d9f-920b-e2d7b88c06c6.mp4
+
 
 ## Run Locally
 
