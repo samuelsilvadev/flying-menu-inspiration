@@ -33,6 +33,13 @@ export function initFlyingAnimation({
   selector = DEFAULT_SELECTOR,
   duration = "1s",
 } = {}) {
+  if (!selector) {
+    console.warn(
+      "A valid selector needs to be provided to flying animation initializer."
+    );
+    return;
+  }
+
   const elementsToAnimate = document.querySelectorAll(selector);
 
   if (elementsToAnimate.length > 0) {
