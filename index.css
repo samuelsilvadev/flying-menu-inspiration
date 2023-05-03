@@ -39,6 +39,7 @@ a {
   display: inline-flex;
   outline: none;
   border-bottom: 1px solid transparent;
+  transition: color 500ms;
 }
 
 a:where(:hover, :focus) {

@@ -10,7 +10,7 @@ const STYLE = `
 
     :where([${DEFAULT_SELECTOR}], [${WRAPPER_SELECTOR}]) > span {
         transform: translateY(0);
-        transition: transform 1s, color 200ms;
+        transition: transform 1s;
         transition-delay: calc(0.1s * var(--delay));
     }
     
