@@ -1,6 +1,6 @@
 {
   "name": "@small-components/flying-menu-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "git@github.com:samuelsilvadev/flying-menu-inspiration.git",
   "author": "Samuel Silva <samuelsilvawb@gmail.com>",
   "description": "Plugin to enable flying animation on any text element",
