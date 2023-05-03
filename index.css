@@ -31,7 +31,7 @@ ul {
   list-style: none;
 }
 
-[data-jumpy-animation] {
+a {
   color: var(--white);
   text-decoration: none;
   font-size: 72px;
@@ -39,30 +39,9 @@ ul {
   display: inline-flex;
   outline: none;
   border-bottom: 1px solid transparent;
-  overflow: hidden;
-  position: relative;
 }
 
-:where([data-jumpy-animation], [data-jumpy-animation-wrapper]) > span {
-  transform: translateY(0);
-  transition: transform 1s, color 200ms;
-  transition-delay: calc(0.1s * var(--delay));
-}
-
-[data-jumpy-animation]:where(:hover, :focus) {
+a:where(:hover, :focus) {
   color: var(--color);
   border-bottom-color: currentColor;
-}
-
-[data-jumpy-animation]:where(:hover, :focus)
-  :is(span, [data-jumpy-animation-wrapper] span) {
-  transform: translateY(-100%);
-}
-
-[data-jumpy-animation-wrapper] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(100%);
-  display: inline-flex;
 }
