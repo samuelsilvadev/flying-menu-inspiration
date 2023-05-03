@@ -1,24 +1,25 @@
-const DEFAULT_SELECTOR = "data-jumpy-animation";
-const WRAPPER_SELECTOR = DEFAULT_SELECTOR + "-wrapper";
+const DEFAULT_SELECTOR = "[data-jumpy-animation]";
+const WRAPPER_SELECTOR = "[data-jumpy-animation-wrapper]";
 
-const STYLE = `
-    [${DEFAULT_SELECTOR}] {
+const buildStyle = (selector, duration) => {
+  return `
+    ${selector} {
         display: inline-flex;
         overflow: hidden;
         position: relative;
     }
 
-    :where([${DEFAULT_SELECTOR}], [${WRAPPER_SELECTOR}]) > span {
+    :where(${selector}, ${WRAPPER_SELECTOR}) > span {
         transform: translateY(0);
-        transition: transform 1s;
+        transition: transform ${duration};
         transition-delay: calc(0.1s * var(--delay));
     }
     
-    [${DEFAULT_SELECTOR}]:where(:hover, :focus) :is(span, [${WRAPPER_SELECTOR}] span) {
+    ${selector}:where(:hover, :focus) :is(span, ${WRAPPER_SELECTOR} span) {
         transform: translateY(-100%);
     }
     
-    [${WRAPPER_SELECTOR}] {
+    ${WRAPPER_SELECTOR} {
         position: absolute;
         top: 0;
         left: 0;
@@ -26,16 +27,21 @@ const STYLE = `
         display: inline-flex;
     }
 `;
+};
 
 export function initFlyingAnimation({
-  selector = `[${DEFAULT_SELECTOR}]`,
+  selector = DEFAULT_SELECTOR,
+  duration = "1s",
 } = {}) {
   const elementsToAnimate = document.querySelectorAll(selector);
 
   if (elementsToAnimate.length > 0) {
     document.head.insertAdjacentHTML(
       "beforeend",
-      `<style data-id="jumpy-animation-styles">${STYLE}</style>`
+      `<style data-id="jumpy-animation-styles">${buildStyle(
+        selector,
+        duration
+      )}</style>`
     );
   }
 
@@ -45,7 +51,10 @@ export function initFlyingAnimation({
     const brokenContent = chunks
       .map((chunk, index) => `<span style="--delay: ${index}">${chunk}</span>`)
       .join("");
-    const duplicateContent = `<div ${WRAPPER_SELECTOR}>${brokenContent}</div>`;
+    const duplicateContent = `<div ${WRAPPER_SELECTOR.slice(
+      1,
+      -1
+    )}>${brokenContent}</div>`;
 
     element.innerHTML = `${brokenContent}${duplicateContent}`;
   }
