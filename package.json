@@ -1,9 +1,21 @@
 {
-  "name": "flying-menu-inspiration",
+  "name": "@small-components/flying-menu-plugin",
   "version": "0.0.0",
   "repository": "git@github.com:samuelsilvadev/flying-menu-inspiration.git",
   "author": "Samuel Silva <samuelsilvawb@gmail.com>",
+  "description": "Plugin to enable flying animation on any text element",
+  "keywords": [
+    "plugin",
+    "javascript",
+    "css",
+    "html",
+    "animation"
+  ],
   "license": "MIT",
+  "main": "core/index.js",
+  "files": [
+    "core"
+  ],
   "devDependencies": {
     "live-server": "1.2.1"
   },
