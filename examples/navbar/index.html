@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --black: #000;
+        --white: #fff;
+        --amber: #ffbe0bff;
+        --orange-pantone: #fb5607ff;
+        --rose: #ff006eff;
+        --blue-violet: #8338ecff;
+        --azure: #3a86ffff;
+      }
+
+      * {
+        font-family: "Inter", sans-serif;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        margin: 0px;
+        padding: 0px;
+        background-color: var(--black);
+      }
+
+      header {
+        background-color: var(--amber);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 60px;
+        z-index: 1;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        padding: 0 20px;
+        text-transform: uppercase;
+      }
+
+      .beginning,
+      .middle {
+        background-color: yellow;
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="beginning"></div>
+      <div class="middle"></div>
+      <nav>
+        <a href="/about/">About</a>
+        <a href="/code-samples/" class="current">Code Samples</a>
+        <a href="/extras/">Extras &amp; Tools</a>
+        <a href="/buy/">BUY</a>
+      </nav>
+    </header>
+    <script type="module">
+      import { initFlyingAnimation } from "../../core/index.js";
+
+      initFlyingAnimation({ selector: "nav > a", duration: "700ms" });
+    </script>
+  </body>
+</html>
