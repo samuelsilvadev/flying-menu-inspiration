@@ -25,6 +25,6 @@
   "scripts": {
     "start": "live-server --port=3000 .",
     "build": "yarn rimraf core/index.d.ts && yarn tsc",
-    "prepublish": "yarn build"
+    "prepare": "yarn build"
   }
 }
