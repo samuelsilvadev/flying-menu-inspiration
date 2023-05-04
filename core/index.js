@@ -21,8 +21,7 @@ const buildStyle = (selector, duration) => {
     
     ${WRAPPER_SELECTOR} {
         position: absolute;
-        top: 0;
-        left: 0;
+        inset: 0;
         transform: translateY(100%);
         display: inline-flex;
     }
