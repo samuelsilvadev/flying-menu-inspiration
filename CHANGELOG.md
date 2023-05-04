@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/samuelsilvadev/flying-menu-inspiration/compare/v0.2.0...v0.2.1) (2023-05-04)
+
+
+### Bug Fixes
+
+* avoid running the animation initializer more than once ([87a492d](https://github.com/samuelsilvadev/flying-menu-inspiration/commit/87a492db0fb702fb8c91ad985ef3dedeb229511d))
+
 ## [0.2.0](https://github.com/samuelsilvadev/flying-menu-inspiration/compare/v0.1.0...v0.2.0) (2023-05-04)
 
 
