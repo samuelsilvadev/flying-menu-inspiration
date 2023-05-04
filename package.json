@@ -13,13 +13,18 @@
   ],
   "license": "MIT",
   "main": "core/index.js",
+  "types": "core/index.d.ts",
   "files": [
     "core"
   ],
   "devDependencies": {
-    "live-server": "1.2.1"
+    "live-server": "1.2.1",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.4"
   },
   "scripts": {
-    "start": "live-server --port=3000 ."
+    "start": "live-server --port=3000 .",
+    "build": "yarn rimraf core/index.d.ts && yarn tsc",
+    "prepublish": "yarn build"
   }
 }
