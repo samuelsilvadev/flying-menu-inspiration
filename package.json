@@ -12,19 +12,21 @@
     "animation"
   ],
   "license": "MIT",
-  "main": "core/index.js",
-  "types": "core/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "core"
+    "dist"
   ],
   "devDependencies": {
+    "@swc/cli": "^0.1.62",
+    "@swc/core": "^1.3.56",
     "live-server": "1.2.1",
     "rimraf": "^5.0.0",
     "typescript": "^5.0.4"
   },
   "scripts": {
     "start": "live-server --port=3000 .",
-    "build": "yarn rimraf core/index.d.ts && yarn tsc",
+    "build": "yarn rimraf dist && yarn swc core/index.js  --out-dir dist && yarn tsc",
     "prepare": "yarn build"
   }
 }

@@ -3,7 +3,8 @@
     "checkJs": false,
     "allowJs": true,
     "declaration": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "outDir": "dist"
   },
   "include": ["core"],
   "exclude": ["node_modules"]
