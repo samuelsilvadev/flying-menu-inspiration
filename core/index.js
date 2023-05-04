@@ -52,6 +52,10 @@ export function initFlyingAnimation({
   }
 
   for (const element of elementsToAnimate) {
+    if (element.dataset.jumpyAnimationReady) {
+      return;
+    }
+
     const content = element.innerText.trim();
     const chunks = content.split("");
     const brokenContent = chunks
@@ -62,6 +66,7 @@ export function initFlyingAnimation({
       -1
     )}>${brokenContent}</div>`;
 
+    element.setAttribute("data-jumpy-animation-ready", true);
     element.innerHTML = `${brokenContent}${duplicateContent}`;
   }
 }
