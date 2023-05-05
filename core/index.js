@@ -41,7 +41,10 @@ export function initFlyingAnimation({
 
   const elementsToAnimate = document.querySelectorAll(selector);
 
-  if (elementsToAnimate.length > 0) {
+  if (
+    elementsToAnimate.length > 0 &&
+    !document.head.querySelector(`[data-id="jumpy-animation-styles"]`)
+  ) {
     document.head.insertAdjacentHTML(
       "beforeend",
       `<style data-id="jumpy-animation-styles">${buildStyle(
