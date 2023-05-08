@@ -23,7 +23,6 @@ jobs:
   auto-merge-release:
     name: Enable automerge on release PRs
     runs-on: ubuntu-latest
-    if: contains(github.event.pull_request.labels.*.name, 'autorelease')
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -32,6 +31,7 @@ jobs:
           fetch-depth: 0
 
       - name: Enable automerge on release PR
+        if: contains(github.event.pull_request.labels.*.name, 'autorelease')
         run: gh pr merge --squash --auto ${{ github.event.pull_request.html_url }}
         env:
           GH_TOKEN: ${{ secrets.CI }}
