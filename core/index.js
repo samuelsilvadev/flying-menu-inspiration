@@ -28,10 +28,10 @@ const buildStyle = (selector, duration) => {
 `;
 };
 
-export function initFlyingAnimation({
+export const initFlyingAnimation = ({
   selector = DEFAULT_SELECTOR,
   duration = "1s",
-} = {}) {
+} = {}) => {
   if (!selector) {
     console.warn(
       "A valid selector needs to be provided to flying animation initializer."
@@ -72,4 +72,4 @@ export function initFlyingAnimation({
     element.setAttribute("data-jumpy-animation-ready", true);
     element.innerHTML = `${brokenContent}${duplicateContent}`;
   }
-}
+};
