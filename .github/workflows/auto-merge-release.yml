@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 0
 
       - name: Debug label names
-        run: echo "${{ github.event.pull_request.labels.*.name }}"
+        run: echo "${{ join(github.event.pull_request.labels.*.name, ', ') }}"
 
   auto-merge-release:
     name: Enable automerge on release PRs
