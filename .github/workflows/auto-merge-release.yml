@@ -9,6 +9,9 @@ jobs:
     name: Enable automerge on release PRs
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Enable automerge on release PR
         run: gh pr merge --squash --auto "{{ github.event.number }}"
         env:
