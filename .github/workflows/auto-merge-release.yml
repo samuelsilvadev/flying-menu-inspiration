@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Enable automerge on release PR
         run: gh pr merge --squash --auto "{{ github.event.number }}"
