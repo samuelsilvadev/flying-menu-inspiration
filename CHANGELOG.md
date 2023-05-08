@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.2](https://github.com/samuelsilvadev/flying-menu-inspiration/compare/v0.2.1...v0.2.2) (2023-05-08)
+
+
+### Bug Fixes
+
+* add space on label ([#6](https://github.com/samuelsilvadev/flying-menu-inspiration/issues/6)) ([4881766](https://github.com/samuelsilvadev/flying-menu-inspiration/commit/4881766154fbae4111f0f8372f888670c8feb809))
+* change validation from `contains` to `startsWith` ([#7](https://github.com/samuelsilvadev/flying-menu-inspiration/issues/7)) ([45b38e5](https://github.com/samuelsilvadev/flying-menu-inspiration/commit/45b38e50f8aaea3235a8f328036a4866c5a483a5))
+* only inlude style tag once ([3e66946](https://github.com/samuelsilvadev/flying-menu-inspiration/commit/3e669462fcdf8f1b9e4540dfc2fca344cdceca10))
+
 ## [0.2.1](https://github.com/samuelsilvadev/flying-menu-inspiration/compare/v0.2.0...v0.2.1) (2023-05-04)
 
 
