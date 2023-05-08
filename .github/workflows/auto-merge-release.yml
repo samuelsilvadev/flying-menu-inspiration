@@ -10,9 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     if: contains(github.event.pull_request.labels.*.name, 'autorelease')
     steps:
-      - name: Enable automerge on dependabot PRs
-        uses: daneden/enable-automerge-action@v1
-        with:
-          github-token: ${{ secrets.CI }}
-          allowed-author: "github-actions[bot]"
-          merge-method: SQUASH
+      - name: Enable automerge on release PR
+        run: gh pr merge --squash --auto "1"
+        env:
+          GH_TOKEN: ${{ secrets.CI }}
