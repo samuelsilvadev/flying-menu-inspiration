@@ -11,6 +11,6 @@ jobs:
     if: contains(github.event.pull_request.labels.*.name, 'autorelease')
     steps:
       - name: Enable automerge on release PR
-        run: gh pr merge --squash --auto "1"
+        run: gh pr merge --squash --auto "{{ github.event.number }}"
         env:
           GH_TOKEN: ${{ secrets.CI }}
