@@ -5,7 +5,15 @@ on:
     types: [opened, synchronize, reopened, labeled, edited]
 
 jobs:
+  wait-for-stability:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sleep for 30 seconds
+        run: sleep 30s
+        shell: bash
+
   auto-merge-release:
+    needs: wait-for-stability
     name: Enable automerge on release PRs
     runs-on: ubuntu-latest
     if: contains(github.event.pull_request.labels.*.name, vars.RELEASE_LABEL)
