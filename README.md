@@ -6,7 +6,6 @@ This project was inspired on a linkedin post from [SuryaKant Borad](https://www.
 
 https://user-images.githubusercontent.com/13966565/235767865-5916af51-1fcb-4d9f-920b-e2d7b88c06c6.mp4
 
-
 ## Run Locally
 
 [Install Node](https://nodejs.org/en/download), [Install yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) and then clone the project:
@@ -49,7 +48,6 @@ Please adhere to this project's `code of conduct`.
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-
 ## Acknowledgements
 
- - [Suryakant Borad](https://github.com/Suryaset)
+- [Suryakant Borad](https://github.com/Suryaset)
