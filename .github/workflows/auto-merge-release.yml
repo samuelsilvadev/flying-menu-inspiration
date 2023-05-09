@@ -7,22 +7,10 @@ on:
     types: [opened, synchronize, reopened, labeled]
 
 jobs:
-  debug:
-    name: Debug label names
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
-          fetch-depth: 0
-
-      - name: Debug label names
-        run: echo "${{ join(github.event.pull_request.labels.*.name, ', ') }}"
-
   auto-merge-release:
     name: Enable automerge on release PRs
     runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, vars.RELEASE_LABEL)
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -31,7 +19,6 @@ jobs:
           fetch-depth: 0
 
       - name: Enable automerge on release PR
-        if: contains(github.event.pull_request.labels.*.name, 'autorelease')
         run: gh pr merge --squash --auto ${{ github.event.pull_request.html_url }}
         env:
           GH_TOKEN: ${{ secrets.CI }}
