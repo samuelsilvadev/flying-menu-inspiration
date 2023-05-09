@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://github.com/samuelsilvadev/flying-menu-inspiration/compare/v0.2.2...v0.3.0) (2023-05-09)
+
+
+### Features
+
+* use same function structure on core ([#19](https://github.com/samuelsilvadev/flying-menu-inspiration/issues/19)) ([0e71c52](https://github.com/samuelsilvadev/flying-menu-inspiration/commit/0e71c5215c2c5b86128132eac20489d234a0b1d6))
+
+
+### Reverts
+
+* include label check ([#17](https://github.com/samuelsilvadev/flying-menu-inspiration/issues/17)) ([28e1eb3](https://github.com/samuelsilvadev/flying-menu-inspiration/commit/28e1eb3ae28e8e627edf1b3f3e129a6f78064dfe))
+
 ## [0.2.2](https://github.com/samuelsilvadev/flying-menu-inspiration/compare/v0.2.1...v0.2.2) (2023-05-08)
 
 
