@@ -1,7 +1,7 @@
 name: Enable automerge on release PRs
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize, reopened, labeled, edited]
 
 jobs:
