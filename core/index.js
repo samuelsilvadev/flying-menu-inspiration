@@ -64,7 +64,7 @@ export const initFlyingAnimation = ({
     const brokenContent = chunks
       .map((chunk, index) => `<span style="--delay: ${index}">${chunk}</span>`)
       .join("");
-    const duplicateContent = `<div ${WRAPPER_SELECTOR.slice(
+    const duplicateContent = `<div aria-hidden="true" ${WRAPPER_SELECTOR.slice(
       1,
       -1
     )}>${brokenContent}</div>`;
