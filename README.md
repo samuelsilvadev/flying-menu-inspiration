@@ -60,6 +60,26 @@ After installing the package, you can import the functions and tweak them to you
     initFlyingAnimation()
 ```
 
+### Connect with your elements
+
+You can include the default selector from the plugin on any text element that you have and they will be animated on hover and on focus.
+
+```html
+    <p data-jumpy-animation>Some text</p>
+```
+
+...or by using the `selector` configuration you can apply any other selector you want.
+
+```typescript
+    import { initFlyingAnimation } from "@small-components/flying-menu-plugin";
+
+    initFlyingAnimation({
+        selector: '.my-selector'
+    })
+```
+
+### Configuration
+
 | Parameter | Type     | Description                | Default |
 | :-------- | :------- | :------------------------- | :-------- |
 | `selector` | `string` | Any css selector that will match the elements you want to animation | [data-jumpy-animation] |
