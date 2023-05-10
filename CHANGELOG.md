@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/samuelsilvadev/flying-menu-inspiration/compare/v0.3.1...v0.3.2) (2023-05-10)
+
+
+### Bug Fixes
+
+* force release ([5f482a0](https://github.com/samuelsilvadev/flying-menu-inspiration/commit/5f482a08e7cb312fced79f848cf7ef4f04115d28))
+
 ## [0.3.1](https://github.com/samuelsilvadev/flying-menu-inspiration/compare/v0.3.0...v0.3.1) (2023-05-10)
 
 
