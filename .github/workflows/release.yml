@@ -8,6 +8,9 @@ permissions:
   pull-requests: write
   actions: read
 
+env:
+  GITHUB_TOKEN: ${{ secrets.CI }}
+
 name: release-please
 
 jobs:
@@ -22,6 +25,8 @@ jobs:
 
       - uses: actions/checkout@v3
         if: ${{ steps.release.outputs.release_created }}
+        with:
+          token: ${{ secrets.CI }}
 
       - uses: actions/setup-node@v3
         with:
