@@ -1,3 +1,9 @@
+<center>
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) [![size](https://img.shields.io/bundlephobia/min/@small-components/flying-menu-plugin)](https://img.shields.io/bundlephobia/min/@small-components/flying-menu-plugin) [![npm](https://img.shields.io/npm/v/@small-components/flying-menu-plugin)](https://img.shields.io/npm/v/@small-components/flying-menu-plugin)
+
+</center>
+
 # Flying Menu
 
 This project was inspired on a linkedin post from [SuryaKant Borad](https://www.linkedin.com/in/suryakant-borad-085361240?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADvaUSUBtg3w6iu4S3aSauDjigA37HyFZ_c&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BDZdPN6kpTQefe8GxJEuaxA%3D%3D) where he created a similar animation, seen that I also wanted to experiment and give it a try on my own.
@@ -35,6 +41,29 @@ Start the server
 ## Deployment
 
 The examples are deployed automatically using github pages
+
+## API Reference
+
+After installing the package, you can import the functions and tweak them to your needs.
+
+### Install
+
+```bash
+    yarn add @small-components/flying-menu-plugin
+```
+
+### Start the animation
+
+```typescript
+    import { initFlyingAnimation } from "@small-components/flying-menu-plugin";
+
+    initFlyingAnimation()
+```
+
+| Parameter | Type     | Description                | Default |
+| :-------- | :------- | :------------------------- | :-------- |
+| `selector` | `string` | Any css selector that will match the elements you want to animation | [data-jumpy-animation] |
+| `duration` | `string` | Desired animation time, given in css units | '1s' |
 
 ## Contributing
 
