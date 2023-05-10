@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/samuelsilvadev/flying-menu-inspiration/compare/v0.3.0...v0.3.1) (2023-05-10)
+
+
+### Bug Fixes
+
+* **a11y:** avoid voice control pronounce the animated content ([#28](https://github.com/samuelsilvadev/flying-menu-inspiration/issues/28)) ([71736fb](https://github.com/samuelsilvadev/flying-menu-inspiration/commit/71736fbab8f7b760994fdf9b0c0bdb6e8f336ea9))
+
 ## [0.3.0](https://github.com/samuelsilvadev/flying-menu-inspiration/compare/v0.2.2...v0.3.0) (2023-05-09)
 
 
